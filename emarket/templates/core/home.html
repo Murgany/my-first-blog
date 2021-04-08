@@ -1,0 +1,314 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+{% block navbar %} {% endblock navbar %}
+
+{% block content %}
+
+<!-- body wrapper -->
+<div class="container-fluid" style="margin-top: 4%">
+
+    <!--slider begin-->
+
+    <div class="container-fluid" style="margin:0; padding:0;">
+        <div class="row justify-content-center" style="margin-top: 10%;">
+            <div class="box-element col-3 card" style="border: 1px solid #8c8c8c; background-color: #f2f2f2;">
+                <img src="{% static 'images/image.jpg' %}" alt="" class="img img-fluid">
+            </div>
+            <i>&nbsp; &nbsp; &nbsp;</i>
+            <div class="col-8"
+                 style="margin-top: %;
+                 padding-right: -15px;
+                 border-radius: 10px;
+                 border: 1px solid #8c8c8c;
+                 overflow: hidden;
+                 background-color: #f2f2f2;">
+                <!--<div class="col-9">-->
+                <div id="demo" class="carousel slide" data-ride="carousel">
+
+                    <!--Indicators -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                        <h3 style="margin:5%" class="txt-color">Top Suppliers</h3>
+                        <p style="margin:5%" class="txt-color">Lorem ipsum dolor sit amet</p>
+                        <div class="carousel-item active fill" style="float; right">
+                            <img style="width:60%; float: right;" class="img-fluid img"
+                                 src="{% static 'images/slide-1.png' %}" alt="">
+                        </div>
+                        <div class="carousel-item fill" style="object-fit: fill">
+                            <img style="width:60%; float: right;" class="img-fluid img"
+                                 src="{% static 'images/car.png' %}" alt="">
+                        </div>
+                        <div class="carousel-item fill" style="object-fit: fill">
+                            <img style="width:60%; float: right;" class="img-fluid img"
+                                 src="{% static 'images/.png' %}" alt="">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev"><span
+                            class="carousel-control-prev-icon"></span></a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next"><span
+                            class="carousel-control-next-icon"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- slider end -->
+
+    <div class="container-fluid" style="margin-bottom: 1%; margin-top: 1%; border-radius:">
+        <div class="row ">
+            <div class="  col-12 text-center" style=" border-radius:;"><h3><strong
+                    style="color: #fff; text-shadow:2px 2px 4px red;">One Month Free!</strong></h3>
+                <a href="#" style="color: #454545;" class="text-muted">ADVERTISE WITH US</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--body wrapper begin -->
+    <div class="container-fluid" style="">
+
+        <!-- featured products row begin -->
+        <div class="row  card-deck" style="border-radius: 10px;">
+
+            <div class="col-6 card box-element" style="margin-bottom: 1%; border-radius: 10px;">
+                <h5 style="margin: 4%;"><strong class="txt-color">Featured</strong></h5>
+                <img src="{% static 'images/car.png' %}" class="card-img-top" alt="..."
+                     style="margin-top:1%; border-radius: 10px;">
+                <div class="card-body">
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.</p>
+                    <p style="margin: %;"><strong>Price:&nbsp; 9999$ &nbsp;</strong><a href="#" class="card-title">Shop
+                        Now</a></p>
+                </div>
+            </div>
+            <div class="col-6 card box-element" style="margin-bottom: 1%; border-radius: 10px;">
+                <h5 style="margin: 4%;"><strong class="txt-color">Featured</strong></h5>
+                <img src="{% static 'images/car.png' %}" class="card-img-top" alt="..."
+                     style="margin-top:1%; border-radius: 10px;">
+                <div class="card-body">
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.</p>
+                    <p style="margin: %;"><strong>Price:&nbsp; 9999$ &nbsp;</strong><a href="#" class="card-title">Shop
+                        Now</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- featured products row end -->
+
+        <div class="container-fluid" style="margin: 0; padding:0">
+            <div class="row  card-deck">
+                <div class="box-element col-6 card"
+                     style="flex-direction: row; border-radius: 10px; margin-bottom: 1%;">
+                    <h5 style="float: left; padding: 3%;"><strong class="txt-color">Featured</strong></h5>
+                    <img src="{% static 'images/watch.jpg' %}" alt="" class="thumbnail img-fluid" style="">
+                    <a class="txt-color" href="#"><strong style="padding: 3%; float: right;">Shop Now</strong></a>
+                </div>
+                <div class="box-element col-6 card"
+                     style="flex-direction: row; border-radius: 10px; margin-bottom: 1%;">
+                    <h5 style="float: left; padding: 3%"><strong class="txt-color">Featured</strong></h5>
+                    <img src="{% static 'images/watch.jpg' %}" alt="" class="thumbnail img-fluid"
+                         style="max-width:120px;max-height:120px;border-radius: 50%">
+                    <a class="txt-color" href="#"><strong style="padding: 3%; float: right;">Shop Now</strong></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="txt-color" style="color: #fff; text-shadow:2px 2px 4px #0099ff;">Browse by category</h2>
+            </div>
+        </div>
+
+        <!-- products row 1 begin -->
+        <div class="card-deck row justify-content-between" style=" ">
+
+            <div class="card box-element col-3" style="margin-bottom: 1%">
+                <img src="{% static 'images/image.jpg' %}" class="img card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Women's Fashion</h5>
+                    <a href="#" class="card-title">Shop Now</a>
+                </div>
+            </div>
+            <div class="card box-element col-3" style="margin-bottom: 1%; border-radius: 10px;">
+                <img src="{% static 'images/image.jpg' %}" class="img card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Men's Fashion</h5>
+                    <a href="#" class="card-title">Shop Now</a>
+                </div>
+            </div>
+            <div class="card box-element col-3" style="margin-bottom: 1%; border-radius: 10px;">
+                <img src="{% static 'images/image.jpg' %}" class="img card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Mothers & Babies</h5>
+                    <a href="#" class="card-title">Shop Now</a>
+                </div>
+            </div>
+            <div class="card box-element col-3" style="margin-bottom: 1%; border-radius: 10px;">
+                <img src="{% static 'images/image.jpg' %}" class="img card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Gifts & Toys</h5>
+                    <a href="#" class="card-title">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        <!-- products row 1 end -->
+
+        <!-- products row 2 begin -->
+        <div class="card-deck row justify-content-between" style=" ">
+
+            <div class="card box-element col-3" style="margin-bottom: 1%">
+                <img src="{% static 'images/image.jpg' %}" class="img card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Phones</h5>
+                    <a href="#" class="card-title">Shop Now</a>
+                </div>
+            </div>
+            <div class="card box-element col-3" style="margin-bottom: 1%; border-radius: 10px;">
+                <img src="{% static 'images/image.jpg' %}" class="img card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Laptops</h5>
+                    <a href="#" class="card-title">Shop Now</a>
+                </div>
+            </div>
+            <div class="card box-element col-3" style="margin-bottom: 1%; border-radius: 10px;">
+                <img src="{% static 'images/image.jpg' %}" class="img card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Appliances</h5>
+                    <a href="#" class="card-title">Shop Now</a>
+                </div>
+            </div>
+            <div class="card box-element col-3" style="margin-bottom: 1%; border-radius: 10px;">
+                <img src="{% static 'images/image.jpg' %}" class="img card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Kitchen</h5>
+                    <a href="#" class="card-title">Shop Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- products row 2 end -->
+
+        <!-- products row 3 begin -->
+        <div class="card-deck row justify-content-between" style=" ">
+
+            <div class="card box-element col-3" style="margin-bottom: 1%">
+                <img src="{% static 'images/image.jpg' %}" class="img card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Furniture</h5>
+                    <a href="#" class="card-title">Shop Now</a>
+                </div>
+            </div>
+            <div class="card box-element col-3" style="margin-bottom: 1%; border-radius: 10px;">
+                <img src="{% static 'images/image.jpg' %}" class="img card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Electrical</h5>
+                    <a href="#" class="card-title">Shop Now</a>
+                </div>
+            </div>
+            <div class="card box-element col-3" style="margin-bottom: 1%; border-radius: 10px;">
+                <img src="{% static 'images/image.jpg' %}" class="img card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Vehicles</h5>
+                    <a href="#" class="card-title">Shop Now</a>
+                </div>
+            </div>
+            <div class="card box-element col-3" style="margin-bottom: 1%; border-radius: 10px;">
+                <img src="{% static 'images/image.jpg' %}" class="img card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Motorcycles</h5>
+                    <a href="#" class="card-title">Shop Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- products row 3 end -->
+
+        <!-- products row 4 begin -->
+        <div class="card-deck row justify-content-between" style=" ">
+
+            <div class="card box-element col-3" style="margin-bottom: 1%">
+                <img src="{% static 'images/image.jpg' %}" class="img card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Machinery</h5>
+                    <a href="#" class="card-title">Shop Now</a>
+                </div>
+            </div>
+            <div class="card box-element col-3" style="margin-bottom: 1%; border-radius: 10px;">
+                <img src="{% static 'images/image.jpg' %}" class="img card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Property</h5>
+                    <a href="#" class="card-title">Shop Now</a>
+                </div>
+            </div>
+            <div class="card box-element col-3" style="margin-bottom: 1%; border-radius: 10px;">
+                <img src="{% static 'images/image.jpg' %}" class="img card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <a href="#" class="card-title">Shop Now</a>
+                </div>
+            </div>
+            <div class="card box-element col-3" style="margin-bottom: 1%; border-radius: 10px;">
+                <img src="{{ products.image}}" class="img card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ products.productname }}</h5>
+                    <p class="card-text">{{ products.description }}</p>
+                    <p class="card-text">Price - {{ products.price }}</p>
+                    <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        <!-- products row 4 end -->
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+
+        </div>
+    </div>
+    <hr>
+</div>
+
+<hr>
+
+
+<!-- Fetch and render products data from database -->
+<!--
+{% for products in products %}
+<div class="container">
+    <div class="row">
+        <div class=""  >
+        <div class="card" style="">
+            <img class="card-img-top" src="{{ product.image }}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{ products.productname }}</h5>
+                <p class="card-text">{{ products.description }}</p>
+                <p class="card-text">Price - {{ products.price }}</p>
+                <a href="#" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endfor %}
+-->
+
+<!-- body wrapper end -->
+{% include 'core/base.html' %}
+{% block footer %} {% endblock footer %}
+{% endblock content %}
+

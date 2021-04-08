@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+
+{% load static %
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<style>
+.signup {
+  box-shadow: 2px 2px 20px #80dfff;
+  border-radius: 10px;
+  padding: 5%;
+}
+</style>
+
+<div class="col-12 sticky-top">
+ <a href="{% url 'home' %}" class="btn my_btn btn-outline-primary" style=" color: #; background-color: #0099ff; border-radius: 4px; margin-top: 10px; margin-left: -7px">Home</a>
+</div>
+
+<div class="d-flex justify-content-center align-items-center container-fluid" style="padding: 10%;">
+
+    <div class="row signup">
+
+        <form method="post">
+            <h3 class="text-center">Join Free</h3>
+            <hr>
+            <div >
+          {% csrf_token %}
+          {{ form|crispy }}
+            </div>
+            <button style="" class="btn my_btn btn-outline-primary btn-block" type="submit">Sign Up</button>
+            <p>Already have an account?<a href="{% url 'login' %}">&nbsp;Log In</a></p>
+        </form>
+
+    </div>
+</div>
+
+
+{% endblock content %}

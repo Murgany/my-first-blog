@@ -1,0 +1,72 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<style>
+.login-container {
+   background-image: url('static/images/ttt.jpg');
+   background-color: transparent
+}
+
+.login {
+   border-radius: 10px;
+   padding: 5%;
+   width: 70%;
+   height: 100%;
+   box-shadow: 2px 2px 20px #80dfff;
+}
+
+.home-btn{
+   color: #; background-color: #0099ff;
+   border-radius: 4px;
+   margin-top:10px;
+   margin-left: -7px
+}
+</style>
+
+{% block navbar %}  {% endblock navbar %}
+
+
+<!--
+{% if form.errors %}
+
+<p style="color: red;">Your username and password didn't match. Please try again.</p>
+
+{% endif %}-->
+
+<div class="d-flex justify-content-center align-items-center container login-container" style="margin-top: 20%;">
+    <div class="row justify-content-center login" style="">
+
+        <form method="post" class="" style="width: 100%; height: 100%">
+            <h3 class="text-center">Login</h3>
+            <div>
+                {% csrf_token %}
+                {{ form|crispy }}
+            </div>
+
+            <button class="btn my_btn btn-outline-primary btn-block" type="submit">Log In</button>
+            <br>
+            <a href="{% url 'password_reset_form' %}">Forgot password ?</a>
+            <br>
+            <br>
+            <p>Don't have an account?<a href="{% url 'signup' %}">&nbsp;Sign Up Free</a></p>
+        </form>
+
+    </div>
+</div>
+<!--{% if next %}
+    {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+    {% else %}
+    <p>Please login to see this page.</p>
+    {% endif %}
+{% endif %}-->
+
+{% include 'core/base.html' %}
+{% block footer %} {% endblock footer %}
+{% endblock %}

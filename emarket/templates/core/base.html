@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1 shrink-to-fit=no"/>
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Base</title>
+</head>
+<style>
+
+body{
+   background-color: # /*#d0cbd8;*/;
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+.txt-color {
+color: #0099ff;
+}
+
+.cards {
+   flex-direction: row;
+   max-width: 150px;
+   max-height: 150px;
+}
+
+.carousel-inner .img {
+    width: 100%;
+    height: Auto%;
+  }
+
+.box-element{
+	box-shadow: /*hsl(0, 0%, 80%) 0 0 16px; 2px 2px 8px #80dfff*/;
+	border-radius: 8px;
+	padding: px;
+	display: block;
+	background-color: #f2f2f2;
+	border: none;
+}
+
+.social-box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0;
+}
+
+/*=== responsive ===*/
+@media screen and (max-width: 600px) {
+	.form-container {
+	    max-width: 350px;
+	    padding: 30px 20px;
+	}
+}
+
+.dropdown .dropdown-menu {
+   border-radius: 5px;
+   background-color: #;
+ }
+
+
+.my_btn {
+   background-color: #0099ff;
+   color: #fff;
+   border-radius: 5px;
+}
+
+/*Medium devices (tablets, 768px and up)
+The navbar toggle appears at this breakpoint */
+
+@media (min-width: 768px) {
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }
+ }
+
+li:hover {
+   background-color: #;
+   transition: 0.5s ease;
+   border-radius: 5px;
+   color: #003566;
+}
+
+li:hover, ul:hover {
+   background-color: #;
+   transition: 0.5s ease;
+   border-radius: 5px;
+   color: #003566;
+}
+
+.active{
+   background-color: #;
+   border-radius: 5px;
+   color: #003566;
+}
+
+.row:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+.img {
+   width: 100%;
+   height: auto;
+   border-radius: 10px;
+   margin-top: 5%;
+}
+
+.thumbnail{
+   max-width:120px;
+   max-height:120px;
+   border-radius: 50%
+}
+
+.fill {
+   object-fit: contain;
+}
+
+
+</style>
+<body>
+
+
+{% block navbar %}
+
+<div class="fixed-top container-fluid" style="background-color: ; margin: 0; padding:0">
+
+    <div class="d-flex flex-row justify-content-between" style="background-color: #0099ff;">
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/jif.gif' %}"
+                                                             style="max-height:50px; width: 90px; border-radius: 5px; margin-left: 5px"></a>
+        <div class="form-inline my-2 my-lg-0">
+            {% if user.is_authenticated %}
+            Welcome! {{ user.username }}
+            <p><a href="{% url 'logout' %}" style="color: #fff; padding-top: 20px;">Log Out</a></p>
+            <p><a href="{% url 'password_reset_form' %}">Reset Password</a></p>
+            {% else %}
+            <a class="btn" href="{% url 'login' %}" style="color: #fff; background-color: #0099ff;">Log in &nbsp;</a>
+            {% endif %}
+            <!-- <a href="{% url 'login' %}" class="btn btn-primary">Login</a>-->
+            <a href="{% url 'signup' %}" class="btn" style=" color: #fff; background-color: #f44336; margin-right: 5px">&nbsp;Join
+                Free&nbsp;</a>
+        </div>
+    </div>
+
+    <div class="flex-row d-flex justify-content-center"
+         style="background-color: #fff; border: 1px solid #8B8989; box-shadow: 2px 2px 8px #80dfff">
+        <nav class="navbar navbar-expand-lg btn-sm  navbar-light">
+            <a class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto" style=" ">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active btn-sm" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ALL</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="padding: 5px;">
+                            <a class="dropdown-item" href="#">Phones & Accessories</a>
+                            <a class="dropdown-item" href="#">Laptops/Desktops & Accessories</a>
+                            <a class="dropdown-item" href="#">Women's Fashion</a>
+                            <a class="dropdown-item" href="#">Men's Fashion</a>
+                            <a class="dropdown-item" href="#">Mothers & Babies</a>
+                            <a class="dropdown-item" href="#">Kitchen Ware</a>
+                            <a class="dropdown-item" href="#">Home Appliances</a>
+                            <a class="dropdown-item" href="#">Kitchen Ware</a>
+                            <a class="dropdown-item" href="#">Furniture</a>
+                            <a class="dropdown-item" href="#">Vehicles & Accessories</a>
+                            <a class="dropdown-item" href="#">Electricals</a>
+                            <a class="dropdown-item" href="#">Property</a>
+                            <a class="dropdown-item" href="#">Jewelery</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Advertisements</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Fashion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Phones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Laptops/Desktops</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Jewelery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Appliances</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Furniture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kitchen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cars/Trucks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Property</a>
+                    </li>
+
+                    <li class="flex-row">
+                        <form style="border-radius: 7px;">
+                            <input style="max-width:150px; border: 1px solid  #0099ff;" class="form-control-sm"
+                                   type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn my_btn btn-sm btn-outline-primary" type="submit">Search</button>
+                        </form>
+                    </li>
+                </ul>
+                <br>
+            </div>
+        </nav>
+    </div>
+</div>
+<br>
+<br>
+<!-- navbar end -->
+{% endblock navbar %}
+
+
+{% block content %} {% endblock content %}
+
+
+{% block footer %}
+<!-- footer area begin -->
+<div class="container-fluid text-light" style="background-color: #595959;">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-12 m-5">
+                    <div itemtype="#">
+                        <h4>Important links</h4>
+                        <span><a class="text-light" href="#">About</a></span>
+                        <br>
+                        <span><a class="text-light" href="#">Privacy</a></span>
+                        <br>
+                        <span><a class="text-light" href="#">Terms of use</a></span>
+                        <br>
+                        <span><a class="text-light" href="#">Advertisements</a></span>
+                    </div>
+                </div>
+                <div class="col-md-12 m-5">
+                    <h4 class="">Follow Us</h4>
+                    <!-- https://bootstrapcreative.com/pattern/custom-social-media-share-buttons/ -->
+                    <div class="social">
+                        <a style="color: #0099ff; background-color: #;" href="https://www.linkedin.com/in/jacoblett"
+                           id="share-li" class="sharer button"><i class="fab fa-2x fa-linkedin pr-1"></i></a>
+                        <a style="color: #0099ff" href="https://github.com/JacobLett" id="share-gh"
+                           class="sharer button"><i class="fab fa-2x fa-github-square pr-1"></i></a>
+                        <a style="color: #0099ff;" href="https://www.facebook.com/bootstrapcreative/" id="share-fb"
+                           class="sharer button"><i class="fab fa-2x fa-facebook-square pr-1"></i></a>
+                        <a style="color: #f44336" href="https://twitter.com/BootstrapC" id="share-tw"
+                           class="sharer button"><i class="fab fa-2x fa-youtube-square pr-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <h4 class="mt-5 text-light">Contact Us</h4>
+            <div class="row">
+                <div class="col-sm-5">
+                    <div itemtype="#">
+                        <div itemprop="description"><em>Web Design and Development</em></div>
+                        <br>
+                        <div itemprop="" itemscope="" itemtype="#" class="text-light">
+                            <span>12345 Street Address</span>
+                            <br>
+                            <span itemprop="addressLocality">Alexandria</span>
+                            <br>
+                            <span itemprop="addressCountry">Egypt</span>
+                            <br>
+                        </div>
+                        <strong class="text-light">Call : </strong><span itemprop="telephone"><a
+                            href="tel:1-586-894-8024" class="text-light">(586) 894-8024</a></span>
+                        <br>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <form class="mt-4 mt-md-0">
+                        <div class="form-group">
+                            <label class="sr-only">Name</label> <!--for="formGroupExampleInput"-->
+                            <input type="text" class="form-control bg-faded-4" id="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only">Email</label>
+                            <input class="form-control bg-faded-4" type="email" value="" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only">Message</label>
+                            <textarea class="form-control bg-faded-4" id="message" rows="3"
+                                      placeholder="Message"></textarea>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="spam">
+                            <label class="custom-control-label" for="spam">Are you a human?</label>
+                        </div>
+                        <button type="submit" class="btn my_btn btn-sm btn-outline-primary mt-2" style="">Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <small class="text-light">
+        © DeFy IT Solutions.
+    </small>
+    <br>
+</div>
+{% endblock footer %}
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
